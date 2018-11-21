@@ -24,6 +24,12 @@
     <ClCompile Include="genericFSM.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="inputEventGenerators.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="handShakingFSM.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="eventHandling.h">
@@ -35,7 +41,10 @@
     <ClInclude Include="bossFSMEvents.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
+    <ClInclude Include="inputEventGenerators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="handShakingFSM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

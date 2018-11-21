@@ -2,6 +2,7 @@
 #include "eventHandling.h"
 #include "genericFSM.h"
 
+#define FPS 1
 
 enum implStates : stateTypes {START_MENU, WAITING_CONNECTION, HANDSHAKING, PLAYING, REMATCH, WAITING_TO_QUIT };	
 
@@ -23,7 +24,7 @@ private:
 	{ { PLAYING,TX(mandar) },			{ REMATCH,TX(avisarquiengano) },	  { START_MENU,TX(verdesp) },	{ WAITING_TO_QUIT,TX(verdsp) },		  { PLAYING,TX(end2) } },			//PLAYING
 	{ { REMATCH,TX(mandar) },			{ HANDSHAKING,TX(verdesp) },		  { START_MENU,TX(verdesp) },	{ WAITING_TO_QUIT,TX(mandogameover) },{ REMATCH,TX(end2) } },			//REMATCH
 	{ { WAITING_TO_QUIT,TX(mandar) },	{ START_MENU,TX(xqllegoack) },		  { START_MENU,TX(xqerror)},	{ WAITING_TO_QUIT,TX(nada) },		  { WAITING_TO_QUIT,TX(end2) } }	//WAITING_TO_QUIT
-	};
+	}; 
 
 	//The action routines for the FSM
 	
@@ -45,7 +46,10 @@ int main(void)
 {
 	bossFSM fsm;
 	//simpleEventGenerator s;	//generador de UN tipo de eventos
-	allegroEventGenerator a;	//mouse, teclado, timer refresh pantalla
+	mouseEventGenerator m;	//mouse
+	timerEventGenerator refreshTimer(FPS);	//timer para refrescar pantalla
+	//timerEventGenerator timeout(); ver en que momento crearlo
+	keyboardEventGenerator k;	//keyboard 
 	
 	mainEventGenerator eventGen;	//generador de eventos de TODO el programa
 
