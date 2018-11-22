@@ -2,6 +2,10 @@
 
 #include "eventHandling.h"
 
+#include <iostream>
+
+using namespace std;
+
 enum implEvent : eventTypes { INPUT_EVENT, DONE, OUT, QUIT, CLOSE_DISPLAY };
 
 //enunm Forward Declaration
@@ -24,7 +28,11 @@ public:
 class outEv : public genericEvent
 {
 public:
+	outEv(string detail_) : detail(detail_) {}
 	eventTypes getType(void) { return OUT; }
+	string getDetail() { return detail; } 
+private:
+	const string detail;
 };
 
 class quitEv : public genericEvent

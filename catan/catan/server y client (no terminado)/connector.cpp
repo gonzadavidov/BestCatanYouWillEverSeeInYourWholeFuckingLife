@@ -7,6 +7,7 @@ connector::connector()
 {
 	IO_handler = new boost::asio::io_service();
 	socket = new boost::asio::ip::tcp::socket(*IO_handler);
+	connected = false;
 }
 
 /*Devuelve false si intento mandar el mensaje y no pudo*/
@@ -39,12 +40,11 @@ bool connector::receiveMessage()
 	do
 	{
 		len = socket->read_some(boost::asio::buffer(buf), error);
-		if (!error)
-			buf[len] = '\0';
 	} while (error.value() == WSAEWOULDBLOCK);
 
 	if (!error)
 	{
+		buf[len] = '\0';
 		ret = true;				//avisa que recibio un mensaje
 		messageReceived = buf;	//guarda el mensaje recibido
 	}
@@ -55,6 +55,11 @@ bool connector::receiveMessage()
 bool connector::messagePresent()
 {
 	return (messageReceived.size() != 0) ? true : false;
+}
+
+bool connector::isConnected()
+{
+	return connected;
 }
 
 

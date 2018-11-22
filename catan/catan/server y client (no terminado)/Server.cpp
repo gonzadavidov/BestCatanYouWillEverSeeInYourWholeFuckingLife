@@ -7,11 +7,9 @@ server::server()
 	server_acceptor = new boost::asio::ip::tcp::acceptor(*IO_handler, ep);
 }
 
-/*Devuelve true si se conecto*/
 /*PREGUNTAR QUE PASA, SI ES BLOQUEANTE O QUE CARAJO*/
-bool server::startConnection()
+void server::startConnection()
 {
-	bool ret = true;
 	//Uncomment if non-blocking mode is desired
 	//
 	//When non-blocking mode is chosen accept operation
@@ -19,17 +17,22 @@ bool server::startConnection()
 	//if there's no client inmediatelly connected when accept operation is performed.
 	//Must comment blocking mode.
 	//
-	server_acceptor->non_blocking(true);
-	boost::system::error_code error;
-	do
+	if (!connected)
 	{
-		server_acceptor->accept(*socket, error);
-	} while ((error.value() == WSAEWOULDBLOCK));
-	if (error)
-		ret = false;
-	//server_acceptor->accept(*socket_forServer);
-	socket->non_blocking(true);
+		server_acceptor->non_blocking(true);
+		boost::system::error_code error;
+		do
+		{
+			server_acceptor->accept(*socket, error);
+		} while ((error.value() == WSAEWOULDBLOCK));
+		if (!error)
+			connected = true;
+		//server_acceptor->accept(*socket_forServer);
+		socket->non_blocking(true);
+	}
 }
+
+
 
 server::~server()
 {
