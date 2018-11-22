@@ -123,6 +123,7 @@
     <ClCompile Include="handShakingFSM.cpp" />
     <ClCompile Include="inputEventGenerators.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="playingFSM.cpp" />
     <ClCompile Include="Server.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +135,7 @@
     <ClInclude Include="genericFSM.h" />
     <ClInclude Include="handShakingFSM.h" />
     <ClInclude Include="inputEventGenerators.h" />
+    <ClInclude Include="playingFSM.h" />
     <ClInclude Include="Server.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

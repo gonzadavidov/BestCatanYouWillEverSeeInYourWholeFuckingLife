@@ -13,7 +13,6 @@ public:
 	client();
 	bool startConnection(const char* host);
 	virtual connectorType getType() { return CLIENT; };
-
 	~client();
 
 private:
