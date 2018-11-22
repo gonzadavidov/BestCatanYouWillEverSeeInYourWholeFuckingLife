@@ -6,7 +6,6 @@
 #include <cstdlib>
 #include <ctime>
 
-
 connectionEstablisher::connectionEstablisher(const char *host_) : host(host_)
 {
 	srand(time(NULL));
@@ -50,7 +49,7 @@ genericEvent * connectionEstablisher::getEvent()
 	{
 		if (currentConnector->getType() == CLIENT)
 		{
-			if (!al_is_event_queue_empty())
+			if (!al_is_event_queue_empty(queue))
 			{
 				ALLEGRO_EVENT ret_event;
 				al_get_next_event(queue, &ret_event);
@@ -103,7 +102,7 @@ genericEvent *connectionEstablisher::getConnectionEv()
 }
 
 
-void connectionEstablisher::changeConector()
+void connectionEstablisher::changeConnector()
 {
 	al_destroy_event_queue(queue);
 	al_destroy_timer(timer);
@@ -117,7 +116,7 @@ void connectionEstablisher::stopConnection()
 	delete currentConnector;	//si deciden parar la conexion, hay que destruir al connector que estaba escuchando
 }
 
-connector *conenctionEstablisher::getConnector()
+connector *connectionEstablisher::getConnector()
 {
 	if (currentConnector->isConnected())
 	{

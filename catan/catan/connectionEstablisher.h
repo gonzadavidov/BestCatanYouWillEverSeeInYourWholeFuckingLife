@@ -2,6 +2,7 @@
 
 #include "connector.h"
 #include "eventHandling.h"
+#include <allegro/allegro5.h>
 
 class connectionEstablisher : public eventGenerator
 {
@@ -10,6 +11,7 @@ public:
 	void startConnecting();
 	virtual genericEvent * getEvent();
 	connector * getConnector();					//devuelve un connector (client o server) si se pudo conectar, sino nullptr 
+	void stopConnection();				//en caso que se quiera cortar la conexion
 	~connectionEstablisher();
 
 private:

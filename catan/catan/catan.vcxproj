@@ -115,18 +115,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="connectionEstablisher.cpp" />
+    <ClCompile Include="connector.cpp" />
     <ClCompile Include="eventHandling.cpp" />
     <ClCompile Include="genericFSM.cpp" />
     <ClCompile Include="handShakingFSM.cpp" />
     <ClCompile Include="inputEventGenerators.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Server.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bossFSMEvents.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="connectionEstablisher.h" />
+    <ClInclude Include="connector.h" />
     <ClInclude Include="eventHandling.h" />
     <ClInclude Include="genericFSM.h" />
     <ClInclude Include="handShakingFSM.h" />
     <ClInclude Include="inputEventGenerators.h" />
+    <ClInclude Include="Server.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
