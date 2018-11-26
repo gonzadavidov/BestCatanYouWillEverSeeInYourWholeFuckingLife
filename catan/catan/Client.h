@@ -2,7 +2,6 @@
 
 #include "connector.h"
 
-#define HELLO_PORT_STR "80"
 #define SERVER_IP "localhost"
 
 using namespace std;
