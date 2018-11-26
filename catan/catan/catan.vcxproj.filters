@@ -45,6 +45,9 @@
     <ClCompile Include="playingFSM.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="networkingFSM.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="eventHandling.h">
@@ -75,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="playingFSM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="networkingFSM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

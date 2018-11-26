@@ -2,7 +2,7 @@
 
 #include "bossFSMEvents.h"
 
-enum implInputEvent : inputEventTypes {MOUSE_EVENT, KEYBOARD_EVENT, TIMER_EVENT, NETWORKING_EVENT};
+enum implInputEvent : inputEventTypes {MOUSE_EVENT, KEYBOARD_EVENT};
 
 class mouseEvent : public inputEv 
 {
