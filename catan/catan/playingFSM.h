@@ -2,6 +2,8 @@
 
 #include "genericFSM.h"
 
+enum handShakingImplStates : stateTypes { , WAIT_NAME_REQUEST, WAIT_NAME_ACK, MAP, CIRC_TOK, WAIT_START_ACK };
+
 class playingFSM : public genericFSM
 {
 
@@ -27,5 +29,5 @@ private:
 	}
 
 public:
-	playingFSM(state initState) : genericFSM(&fsmTable[0][0], 6, 7, initState) {}	//crear fsm chica, display (en fsm chica), atachear fsm chica como fuente de eventos
+	playingFSM(stateTypes initState) : genericFSM(&fsmTable[0][0], 6, 7, initState) {}	//crear fsm chica, display (en fsm chica), atachear fsm chica como fuente de eventos
 };

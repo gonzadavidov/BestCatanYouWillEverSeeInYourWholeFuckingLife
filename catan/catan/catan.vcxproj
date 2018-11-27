@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bossFSMEvents.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="connectionEstablisher.cpp" />
     <ClCompile Include="connector.cpp" />
@@ -136,6 +137,7 @@
     <ClInclude Include="genericFSM.h" />
     <ClInclude Include="handShakingFSM.h" />
     <ClInclude Include="inputEventGenerators.h" />
+    <ClInclude Include="networkingEvents.h" />
     <ClInclude Include="networkingFSM.h" />
     <ClInclude Include="playingFSM.h" />
     <ClInclude Include="Server.h" />

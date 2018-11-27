@@ -22,10 +22,11 @@ class genericFSM : public eventGenerator
 	
 	private:
 	stateTypes state;
-	genericEvent * fsmEvent=nullptr; 
 		
 	const unsigned int rowCount;
 	const unsigned int columnCount;
 	const fsmCell *const FSMTable;
-							
+	
+	protected:
+	genericEvent * fsmEvent = nullptr;
 };
