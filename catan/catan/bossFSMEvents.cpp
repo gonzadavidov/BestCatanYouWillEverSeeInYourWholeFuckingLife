@@ -1,6 +1,6 @@
 #include "bossFSMEvents.h"
 
-networkingEv::networkingEv(char header_)
+networkingEv::networkingEv(networkingEventTypes header_)
 {
 	error = true;
 	if (validHeader(header_))

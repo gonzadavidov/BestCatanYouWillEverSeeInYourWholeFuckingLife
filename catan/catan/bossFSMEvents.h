@@ -61,7 +61,7 @@ public:
 class networkingEv : public genericEvent
 {
 public:
-	networkingEv(char header_);
+	networkingEv(networkingEventTypes header_);
 	eventTypes getType(void) { return NETWORKING_EVENT; }
 	networkingEventTypes getHeader();
 	bool getError();
