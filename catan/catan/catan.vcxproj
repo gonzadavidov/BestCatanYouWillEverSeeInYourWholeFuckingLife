@@ -124,7 +124,6 @@
     <ClCompile Include="handShakingFSM.cpp" />
     <ClCompile Include="inputEventGenerators.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="networkingFSM.cpp" />
     <ClCompile Include="playingFSM.cpp" />
     <ClCompile Include="Server.cpp" />
   </ItemGroup>
@@ -138,7 +137,6 @@
     <ClInclude Include="handShakingFSM.h" />
     <ClInclude Include="inputEventGenerators.h" />
     <ClInclude Include="networkingEvents.h" />
-    <ClInclude Include="networkingFSM.h" />
     <ClInclude Include="playingFSM.h" />
     <ClInclude Include="Server.h" />
   </ItemGroup>
