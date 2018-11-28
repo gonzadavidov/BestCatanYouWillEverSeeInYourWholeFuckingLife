@@ -51,6 +51,9 @@
     <ClCompile Include="bossFSMEvents.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="allegro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="eventHandling.h">
@@ -89,5 +92,11 @@
     <ClInclude Include="networkingEvents.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="allegro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
