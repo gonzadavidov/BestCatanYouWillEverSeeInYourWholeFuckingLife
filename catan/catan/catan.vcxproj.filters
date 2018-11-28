@@ -48,8 +48,13 @@
     <ClCompile Include="playingFSM.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="bossFSM.cpp">
+      <Filter>Resource Files</Filter>
+=======
     <ClCompile Include="allegro.cpp">
       <Filter>Source Files</Filter>
+>>>>>>> e1b592baadc174cf7183f22731226e81f7d72a95
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,11 +91,17 @@
     <ClInclude Include="playingFSM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
+    <ClInclude Include="bossFSM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+=======
     <ClInclude Include="allegro.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+>>>>>>> e1b592baadc174cf7183f22731226e81f7d72a95
   </ItemGroup>
 </Project>

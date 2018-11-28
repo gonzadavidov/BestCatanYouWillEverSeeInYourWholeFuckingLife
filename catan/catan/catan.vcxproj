@@ -123,7 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <ClCompile Include="bossFSM.cpp" />
+=======
     <ClCompile Include="allegro.cpp" />
+>>>>>>> e1b592baadc174cf7183f22731226e81f7d72a95
     <ClCompile Include="bossFSMEvents.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="connectionEstablisher.cpp" />
@@ -137,7 +141,11 @@
     <ClCompile Include="Server.cpp" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <ClInclude Include="bossFSM.h" />
+=======
     <ClInclude Include="allegro.h" />
+>>>>>>> e1b592baadc174cf7183f22731226e81f7d72a95
     <ClInclude Include="bossFSMEvents.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="connectionEstablisher.h" />
